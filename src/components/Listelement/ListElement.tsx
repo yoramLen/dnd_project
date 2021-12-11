@@ -13,8 +13,8 @@ interface ListElementProps {
 
   
     return (
-      <Link to={ {pathname:`/Details/${type}/${listContent.index}`}} className={`${styles.linkje}`} >
-        <div key={listContent.name} className={`${styles.listCard}`}>
+      <Link to={ {pathname:`/Details/${type}/${listContent.index}`}} className={styles.linkje} >
+        <div key={listContent.name} className={styles.listCard}>
           <div>{listContent.name}</div>
         </div>
       </Link>
