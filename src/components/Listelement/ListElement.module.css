@@ -1,0 +1,36 @@
+    .listCard {
+        border: 1px;
+        padding: 10px;
+        width: 200px;
+        height: 150px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        background-color: #808080;
+        border-radius: 5px;
+        margin: 10px;
+        opacity: 80%;
+        text-align: center;
+        font-weight: bold;
+        justify-content: center;
+    }
+    
+    .linkje {
+        color: rgb(0, 0, 0);
+    }
+    
+    .linkje:hover {
+        color: rgb(204, 14, 14)
+    }
+    
+    .listCard:hover {
+        border: 2px;
+        padding: 10px;
+        width: 200px;
+        height: 170px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        background-color: #808080;
+        border-radius: 5px;
+        margin: 10px;
+        opacity: 100%;
+    }

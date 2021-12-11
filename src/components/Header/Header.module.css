@@ -1,0 +1,15 @@
+.dnd_nav,
+#collasible-nav-dropdown,
+.dropdown-menu.show,
+.dropdown-item {
+    background-color: #882323;
+    color: antiquewhite;
+}
+
+.dropdown-menu.show {
+    background-color: #882323;
+}
+
+.dropdown-item {
+    color: antiquewhite;
+}
