@@ -5,7 +5,7 @@
         height: 150px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transition: 0.3s;
-        background-color: #808080;
+        background-color: #808080 !important;
         border-radius: 5px;
         margin: 10px;
         opacity: 80%;
@@ -15,11 +15,11 @@
     }
     
     .linkje {
-        color: rgb(0, 0, 0);
+        color: rgb(0, 0, 0) !important;
     }
     
     .linkje:hover {
-        color: rgb(204, 14, 14)
+        color: rgb(204, 14, 14) !important;
     }
     
     .listCard:hover {
