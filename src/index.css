@@ -8,3 +8,14 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+html,
+body,
+#App,
+#App>div {
+    height: 100%;
+}
+
+body>#root>div {
+    height: 100%;
+}

@@ -20,7 +20,6 @@ const App = () => {
 
 
   return (
-    <div className={styles.fillWindow}>
       <ThemeContext.Provider value={{ mode: mode, setMode: setMode }}>
 
 
@@ -33,16 +32,19 @@ const App = () => {
 
 
                 <Route path="/" exact>
-                  <HomePage />
+                    <HomePage />
                 </Route>
                 <Route path="/About" exact>
-                  <AboutPage />
+
+                    <AboutPage />
+
                 </Route>
                 <Route path="/Contact" exact>
                   <ContactPage />
                 </Route>
                 <Route path="/Spells" exact>
-                  <SpellPage />
+                    <SpellPage />
+
                 </Route>
                 <Route path="/Details/:type/:index">
                   <DetailPage />
@@ -67,7 +69,6 @@ const App = () => {
         </Router>
 
       </ThemeContext.Provider>
-    </div>
 
 
   );
