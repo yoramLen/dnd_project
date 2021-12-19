@@ -4,8 +4,23 @@
         width: 200px;
         height: 150px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        background-color: #808080 !important;
+        background-color: #503535 !important;
         border-radius: 5px;
+        margin: 10px;
+        opacity: 0.8;
+        text-align: center;
+        font-weight: bold;
+        justify-content: center;
+    }
+    
+    .listCardLight {
+        border: 1px;
+        padding: 10px;
+        width: 200px;
+        height: 150px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: #ce9696 !important;
+        border-radius: 5px rgb(218, 168, 168);
         margin: 10px;
         opacity: 0.8;
         text-align: center;
