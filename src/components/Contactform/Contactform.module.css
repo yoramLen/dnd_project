@@ -1,0 +1,13 @@
+.formWidth {
+    width: 80%;
+}
+
+.formlabel {
+    text-align: left !important;
+    align-self: flex-start;
+}
+
+.formAlign {
+    align-self: center !important;
+    align-content: center !important;
+}
