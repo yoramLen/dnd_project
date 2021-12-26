@@ -8,6 +8,7 @@
 }
 
 .formAlign {
+    width: 80% !important;
     align-self: center !important;
     align-content: center !important;
 }

@@ -1,7 +1,8 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import { Alert, Button, Col, Form, Row } from 'react-bootstrap';
 import { BrowserRouter } from 'react-router-dom';
 import styles from "./Contactform.module.css";
+import emailjs from "emailjs-com"
 
 
 interface FormInput{
@@ -12,71 +13,53 @@ interface FormInput{
   address:string
 }
 
+  
+
 const Contactform = () =>{
     const [sent, setSent] = useState<boolean>(false);
+    const form = useRef<HTMLFormElement>(null);
 
 
 
     useEffect(()=>{
         setSent(false);
+        emailjs.init('user_XQlCB7S5hRa6EpNOf0Zxf');
     }, [])
 
-
-    const SubmitHandler = ()=>{
+    const sendEmail = (e:any) => {
+      e.preventDefault();
       setSent(true);
-
-      setTimeout(()=>{
-        window.location.reload()
-      },2000)
-
-    }
+      emailjs.sendForm('dndservice', 'template_wpu6krp', form.current!, 'user_XQlCB7S5hRa6EpNOf0Zxf')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        setTimeout(()=>{window.location.reload()},2000)
+    };
 
 
 return(
   
     <div className={styles.formAlign}>
       {sent?<Alert variant='success' className={styles.formWidth}>Your Email was sent successfully</Alert>:""}
-            <Form className={styles.formWidth}>
-  <Row className="mb-3">
-    <Form.Group as={Col} controlId="formGridEmail">
-      <Form.Label className={styles.formlabel}>Email</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
-    </Form.Group>
-
-  </Row>
-  <Row className='mb-3'>
-  <Form.Group as={Col} controlId="formGridPassword">
-      <Form.Label>First Name</Form.Label>
-      <Form.Control type="first name" placeholder="John" />
-    </Form.Group>
-    <Form.Group as={Col} controlId="formGridPassword">
-      <Form.Label>First Name</Form.Label>
-      <Form.Control type="last name" placeholder="Doe"  />
-    </Form.Group>
-
-
-      
-  </Row>
-<Row>
-<Form.Group className="mb-3" controlId="formGridAddress1">
-    <Form.Label>Address</Form.Label>
-    <Form.Control placeholder="1234 Main St" />
+      <Form ref={form} onSubmit={sendEmail}>
+  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control type="email" placeholder="name@example.com" name="user_email" />
   </Form.Group>
-</Row>
-
-  <Row className="mb-3">
+  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+    <Form.Label>Name</Form.Label>
+    <Form.Control type="text" placeholder="John Doe" name="user_name" />
+  </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
     <Form.Label>Example textarea</Form.Label>
-    <Form.Control as="textarea" rows={3} />
+    <Form.Control as="textarea" rows={3} name={"message"} />
   </Form.Group>
-  </Row>
-
-
-  <Button variant="danger" type="submit" onClick={()=>{SubmitHandler()}}>
+  <Button variant="danger" type="submit" value="send">
     Submit
   </Button>
-</Form>
-
+</Form>  
 
     </div>
 
