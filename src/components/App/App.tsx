@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './App.module.css';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import AboutPage from '../../pages/AboutPage/AboutPage';
-import ContactPage from '../Spells/ContactPage/ContactPage';
+import ContactPage from '../../pages/ContactPage/ContactPage';
 import HomePage from '../../pages/HomePage/HomePage';
 import SpellPage from '../../pages/SpellPage/SpellPage';
 import Header from '../Header/Header';

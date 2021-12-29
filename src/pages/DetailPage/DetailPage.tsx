@@ -100,7 +100,10 @@ const DetailPage = () => {
         loading ?<div>content is loading</div> :
         <div className='contentWrapper'>
         <h1 className={styles.centertext}>{selectedContent.name}</h1>
+        <div className={styles.textwrapper}>
         <div>{selectedContent.desc}</div>
+
+        </div>
         </div>
 
 

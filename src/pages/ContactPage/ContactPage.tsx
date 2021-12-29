@@ -1,4 +1,4 @@
-import Contactform from '../../Contactform/Contactform';
+import Contactform from '../../components/Contactform/Contactform';
 import styles from './ContactPage.module.css';
 const ContactPage = () => {
 

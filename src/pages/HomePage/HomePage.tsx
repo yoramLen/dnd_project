@@ -6,7 +6,12 @@ const HomePage = () => {
     return (
         <div className='contentWrapper'>
             <h1 className={styles.centertext} >Home</h1>
-        <p className={styles.centertext}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolor fugit eos ullam sed qui odio ducimus, corporis dolorum repudiandae tempore, doloribus ea suscipit, harum necessitatibus deserunt blanditiis voluptatibus accusantium.</p>
+            <div className={styles.textwrapper}>
+                <h2>What is this?</h2>
+                <p>This is an attempt to collect D&D resources in a concise way. You can choose one of the categories in the dropdown menu and this will take you to an overview page for that category. When you click on a card it will take you to a page with details about your selected card. </p>
+
+            </div>        
+            
         </div>
     );
 }
